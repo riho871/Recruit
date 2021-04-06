@@ -1,1 +1,1 @@
-except node_modules
+except node_modules and some of images
