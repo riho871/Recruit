@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Recruit</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/send_url.js"></script>
+  </head>
+  <body>
+    <%- include('header'); %>
+      <main>
+        <h1><img src="/images/アンケートシートアイコン.png" alt=""> 求人</h1>
+        <div class="slide">
+            <a href=""><img src="/images/pickup1.png" alt="1"></a>
+            <a href=""><img src="/images/pickup2.png" alt="2"></a>
+            <a href=""><img src="/images/pickup3.png" alt="3"></a>
+        </div>
+        <div class="search">キーワードで探してみる
+          <input type="search" placeholder="キーワードを入力してください">
+          <button>検索する</button>
+          <p>職種、勤務地、プログラミング言語、ツール、など半角スペースを入れて入力してください。</p>
+        </div>
+        <div class="category">カテゴリーで探してみる
+            <ul>
+                <li><a href="">エンジニア</a></li>
+                <li><a href="">デザイナー</a></li>
+                <li><a href="">東京</a></li>
+                <li><a href="">Java</a></li>
+                <li><a href="">Node.js</a></li>
+                <li><a href="">北海道</a></li>
+                <li><a href="">沖縄</a></li>
+            </ul>
+        </div>
+        <div class="job-list"><img src="/images/指差しアイコンのフリー素材.png" alt=""> 一覧
+            <ul>
+                <!-- <li class="job"><div class="job-title">タイトル</div>
+                    <p><img src="/images/list2.jpeg" alt="2"></p>
+                    <p>　テキスト<br>　￥<br>　東京</p>
+                    <div class="job-button">
+                        <button><a href=""><img src="/images/星アイコン6.png" alt=""> 気になる</a></button>
+                        <button><a href="/content"><img src="/images/サーチアイコン.png" alt=""> 詳細を見る</a></button>
+                    </div>
+                </li> -->
+                <% jobs.forEach((job) => { %>
+                <li class="job"><div class="job-title"><%= job.title %></div>
+                  <p><img src="/images/list3.jpeg" alt="3"></p>
+                  <p><%= job.point %></p>
+                  <div class="job-button">
+                    <button><a href=""><img src="/images/星アイコン6.png" alt=""> 気になる</a></button>
+                    <button><a href="/content<%= job.id %>"><img src="/images/サーチアイコン.png" alt=""> 詳細を見る</a></button>
+                  </div>
+                </li>
+                <% }) %>
+            </ul>
+        </div>
+      </main>
+    <%- include('footer'); %>
+  </body>
+</html>
