@@ -41,14 +41,15 @@
                         <button><a href=""><img src="/images/サーチアイコン.png" alt=""> 詳細を見る</a></button>
                     </div>
                 </li> -->
-                <li class="job"><div class="job-title"></div>
-                    <p><img src="/images/list3.jpeg" alt="3"></p>
-                    <p></p>
-                    <div class="job-button">
-                        <button><a href=""><img src="/images/星アイコン6.png" alt=""> 気になる</a></button>
-                        <button><a href="/content<%= job.id %>"><img src="/images/サーチアイコン.png" alt=""> 詳細を見る</a></button>
-                    </div>
-                </li>
+                <% jobs.forEach((job) => { %>
+                <li class="job"><div class="job-title"><%= job.title %></div>
+                  <p><img src="/images/list3.jpeg" alt="3"></p>
+                  <p><%= job.point %></p>
+                  <div class="job-button">
+                    <button><a href=""><img src="/images/星アイコン6.png" alt=""> 気になる</a></button>
+                    <button><a href="/content<%= job.id %>"><img src="/images/サーチアイコン.png" alt=""> 詳細を見る</a></button>
+                  </div>
+                </l
             </ul>
         </div>
       </main>
